@@ -3,7 +3,7 @@ import { property, customElement } from 'lit/decorators';
 
 @customElement('app-header')
 export class AppHeader extends LitElement {
-  @property({ type: String }) title = 'PWA Starter';
+  @property({ type: String }) title = 'Saveless Sender';
 
   static get styles() {
     return css`
@@ -13,9 +13,13 @@ export class AppHeader extends LitElement {
         align-items: center;
         padding-left: 16px;
         padding-right: 16px;
-        background: var(--app-color-primary);
-        color: white;
-        height: 4em;
+        background: var(--primary-bg-color);
+        color: var(--primary-text-color);
+        height: 5em;
+        margin-bottom: 30px;
+        border-bottom: var(--prime-border);
+        position: fixed;
+        width: calc(100vw - 32px);
       }
 
       header h1 {
@@ -35,11 +39,6 @@ export class AppHeader extends LitElement {
         margin-left: 10px;
       }
 
-      @media(prefers-color-scheme: light) {
-        header {
-          color: black;
-        }
-      }
     `;
   }
 
@@ -52,10 +51,10 @@ export class AppHeader extends LitElement {
       <header>
         <h1>${this.title}</h1>
 
-        <nav>
+        <!-- <nav>
           <fast-anchor href="./" appearance="button">Home</fast-anchor>
           <fast-anchor href="./about" appearance="button">About</fast-anchor>
-        </nav>
+        </nav> -->
       </header>
     `;
   }

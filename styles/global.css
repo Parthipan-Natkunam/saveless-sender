@@ -5,16 +5,30 @@
 */
 :root {
   --font-family: sans-serif;
+  --app-bg: rgb(24, 25, 26);
+  --text-color: rgb(109, 138, 85);
+  --primary-bg-color: rgb(31, 32, 32);
+  --card-bg-color: rgba(31, 32, 32, 0.76);
+  --primary-text-color: rgb(112, 185, 57);
+  --prime-border: 3px solid rgb(67, 117, 28);
+  --field-border: 1px solid rgb(148, 155, 143);
+  --field-success-border: 1px solid rgb(112, 185, 57);
+  --field-error-border: 1px solid rgb(223, 76, 39);
+  --medium-radius: 9px;
 }
 
 html, body {
   font-family: var(--font-family);
   padding: 0;
   margin: 0;
-  background: #181818;
+  background: var(--app-bg);
+  color: var(--text-color);
+}
+*,*>::after,*>::before{
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   html,
   body {
     background: #edebe9;
@@ -33,4 +47,4 @@ html, body {
     --neutral-fill-input-active: #e5e5e5;
   }
 
-}
+} */

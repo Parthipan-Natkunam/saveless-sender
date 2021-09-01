@@ -12,7 +12,7 @@ export class AppIndex extends LitElement {
   static get styles() {
     return css`
       main {
-        padding: 16px;
+        padding: 10em 0 5em 0;
       }
 
       #routerOutlet > * {
